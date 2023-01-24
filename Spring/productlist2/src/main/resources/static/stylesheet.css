@@ -1,0 +1,124 @@
+body {
+	background-color: rgb(211, 190, 171);
+	color: rgb(65, 34, 22);
+}
+
+header > h1 {
+	font-size:40px;
+	color:#4B3E38;
+}
+
+h1, h2 {
+	text-align:center;
+}
+
+nav {
+	background-color:rgb(190, 165, 146);
+}
+
+nav > p {
+	padding-left: 10px; 
+	margin-left: 10px;
+}
+
+nav > p > a {
+	font-size: 15px;
+	color: #513226;
+	font-weight = bold;
+}
+
+a {
+	color: white;
+}
+
+p {
+	font-size:20px;
+	color:#4B3E38;
+}
+
+th {
+	padding:20px;
+}
+
+.simple_table {
+	font-size: 25px;
+	width: 100%;
+}
+
+.main_text {
+	font-size: 20px;
+	color: #412216
+}
+
+.game_respond_text {
+	background-color:rgb(200, 175, 156);
+	color: rgb(75, 44, 32);
+	font-style: italic;
+	font-size: 18px;
+}
+
+.art_style1 {
+	background-color:rgb(75, 62, 56);
+}
+
+.art_style1 > h2 {
+	color:rgb(245, 225, 210);
+}
+
+.art_style2 {
+	background: rgb(216, 195, 176);
+}
+
+.art_style2 > h2 {
+	margin: 4px;
+	font-size: 28px;
+	font-weight: bold;
+	color: rgb(65, 34, 22);
+}
+.art_style2 > p {
+	margin: 10px;
+	font-size: 15px;
+	color: rgb(41, 22, 16);
+}
+
+.links_aside {
+	width: 30%;
+	padding-left: 15px;
+	margin-left: 15px;
+	float: right;
+	font-style: italic;
+	background-color: rgb(91, 72, 66);
+	color: rgb(225, 205, 186);
+}
+
+.clock_aside {
+	text-align: right;
+	width: auto;
+	padding-left: 15px;
+	margin-left: 15px;
+	float: right;
+}
+
+dt {
+	margin: 4px;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+	color: rgb(65, 34, 22);
+}
+
+dd {
+	margin: 10px;
+	font-size: 15px;
+	color: rgb(41, 22, 16);
+}
+
+footer {
+	background-color: rgb(75, 62, 56);
+	color:rgb(245, 225, 210);
+}
+
+input: focus {
+  border: 3px solid rgb(116, 95, 76);
+  outline: none;
+}
