@@ -1,3 +1,5 @@
+Project: Chess website example
+
 Course: Web System Programming 2022/23
 Authors: Monika Jung, Rysiek Polkowski
 
