@@ -1,5 +1,15 @@
-# POINTS
+Course: Web System Programming 2022/23
+Authors: Monika Jung, Rysiek Polkowski
 
+Used files: HTML, CSS, JS, PHP
+Apache HTTP Server: XAMPP
+Database: MySQL
+
+Database path: xmapp\mysql\data\<db folder: 'users_db'>
+All files path: xmapp\htdocs\<optional - project name: 'Chess World Website'>\<all files>
+
+
+POINTS:
 list HTML0	10/10
 list HTML1	10/10
 list HTML2	10/10
