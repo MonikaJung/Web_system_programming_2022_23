@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Exhibition of finished exercises.">
+		<meta name="keywords" content="chess, world, game, about, rules, download">
+		<meta name="authors" content="Rysiek Polkowski, Monika Jung">
+        <!-- Website tittle -->
+        <title>Exercises exhibition</title>
+		
+		<link rel="icon" type="image/x-icon" href="images/chess_tower_icon.ico"> 
+		<link rel="stylesheet" href="style.css">
+		
+		<script type="text/javascript" src="JS_files\poligon2-1.js"></script>
+		<script type="text/javascript" src="JS_files\poligon2-2.js"></script>
+		<script type="text/javascript" src="JS_files\poligon2-3.js"></script>
+		<script type="text/javascript" src="JS_files\poligon2-4.js"></script>
+		<script type="text/javascript" src="JS_files\poligon2-5.js"></script>
+		<script type="text/javascript" src="JS_files\poligon2-6.js"></script>
+		
+    </head>
+
+    <body onload="f5()">
+		<h1>Lista JavaScript2</h1>
+		
+		<div id="zad1">
+			<h3>
+				1.	Zademonstrować działanie metod JavaScript: createElement, createTextNode, appendChild, insertBefore, replaceChild, removeChild oraz właściwości parentNode (wstawić do listy element numerowany, np. element 1, element 2…).
+			</h3>
+
+			<div id="div1">Before this div will be pasted another div using createElement in js</div>
+			<button type="button" id="b1.1" onclick="f1()">Click Me!</button>
+			<br><br>
+			
+			<div>
+			<span id="childSpan">foo bar</span>
+			</div>
+			<button type="button" id="b1.2" onclick="f12()">Click Me!</button>
+
+			<br><br>
+			
+			<div id="top">
+				<div id="nested">this will be removed</div>
+				<div id="nested2">removeChild</div>
+			</div>
+			<button type="button" id="b1.3" onclick="f13()">Click Me!</button>
+			<br>
+			
+			<div>
+				<ol>
+					<li>a</li>
+					<li id="list_row">a</li>
+					<li>a</li>
+				</ol>
+			</div>
+			<div id="odp14"></div>
+			<button type="button" id="b1.4" onclick="f14()">Click Me!</button>
+
+			<br><br>
+			
+		</div>
+		
+		<div id="zad2">
+			<h3>
+				2.	Zademonstrować działanie kolekcji: images, links, forms, anchors oraz metod item i namedItem.
+			</h3>
+		
+			<div>
+ 				<div style="float:left"><img src="images/bishop_movement.jpg"></div>
+				<div style="float:left"><img src="images/king_movement.jpg"></div>
+				<div style="float:left"><img src="images/knight_movement.jpg"></div>
+				<div style="float:left"><img src="images/rook_movement.jpg"></div>
+				<div style="clear:both"></div>
+				
+				<a name="main_page1" href="index.html" target="blank_">Main Chess World page1</a><br>
+				<a name="main_page2" href="index.html" target="blank_">Main Chess World page2</a><br>
+				<a name="main_page3" href="index.html" target="blank_">Main Chess World page3</a><br>
+				<a name="main_page4" href="index.html"target="blank_">Main Chess World page4</a><br>
+				<a name="html">HTML Tutorial</a><br>
+				<a name="css">CSS Tutorial</a><br>
+				<a name="xml">XML Tutorial</a><br>
+				
+				<div name="image_and_areas">
+					<p>Click the <strong>book</strong> to see its website, choose the <strong>phones</strong> to see best chess apps, click the <strong>chess figures</strong> to see our home page.</p>
+					<img src="images/chess_book.jpg" alt="Chess a phone and a book" usemap="#chess_book_map" width="809px" height="453px">
+				</div>
+
+				<map name="chess_book_map">
+				  <area shape="circle" coords="182,224,153" alt="Chess book" target="blank_" href="https://playingchesswithoutaboard.com/book/">
+				  <area shape="poly" coords="420,61,730,32,730,279,420,250" alt="Chess figures" href="https://www.chess.com/article/view/the-best-chess-apps" target="blank_">
+				  <area shape="rect" coords="433,314,680,410" alt="Cup of coffee" href="index.html" target="blank_">
+				</map>
+				
+				<p><form id="myCarForm">
+					Favorite Car: <input type="text" name="fname" value="Volvo">
+				</form></p>
+
+				<p><form id="myColorForm">
+					Favorite Color: <input type="text" name="favcolor" value="Blue">
+				</form></p>
+			</div>
+			<button type="button" id="b2.1" onclick="f2()">Click Me!</button>
+			<div id="odp21"></div>
+			<div id="odp25"></div>
+			<br><br>
+			
+		</div>
+		
+		<div id="zad3">
+			<h3>
+				3.	Umożliwić użytkownikowi zmianę na żądanie stylów CSS: koloru tła, koloru tekstu, rodzaju czcionki (z listy).
+			</h3>
+
+			<div>
+				<select id="theme selector" onclick="f3()">
+					<optgroup label="Background color">
+						<option value="1">Default</option>
+						<option value="2">Blue</option>
+						<option value="3">Yellow</option>
+						<option value="4">Green</option>
+					</optgroup>
+					<optgroup label="Text color">
+						<option value="10">Black</option>
+						<option value="11">White</option>
+						<option value="12">Dark grey</option>
+					</optgroup>
+					<optgroup label="Text font">
+						<option value="20">papyrus, fantasy</option>
+						<option value="21">Times new roman</option>
+						<option value="22">Arial, Helvetica, sans-serif</option>
+					</optgroup>
+				</select>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+			<br><br>
+			
+		</div>
+		
+		<div id="zad4">
+			<h3>
+				4.	Zademonstrować możliwości właściwości altKey, ctrlKey, shiftKey, keyCode, clientX, clientY, screenX, screenY obiektu event.
+				<br>
+				Wykorzystać zdarzenia: mousemove, mousedown, mouseover, mouseout.
+
+			</h3>
+
+			<button type="button" id="b4" onclick="f4()">Click Me!</button><br>
+			<input type="text" id="i4" onkeypress="f42(event)" maxlength="0"><br>
+			<img onmousemove="f43(event)" onmouseover="bigImg(this)" onmouseout="normalImg(this)" onmousedown="mouseDown()" onmouseup="mouseUp()" border="0" src="images/chess_tower_icon.ico" alt="Tower" width="32" height="32">
+			<div id="odp4"></div>
+			<br><br>
+			
+		</div>
+		
+		<div id="zad5" onload="f5()">
+			<h3>5.	W formularzach wykorzystać zdarzenia focus i blur do wyświetlania tekstów pomocy oraz zdarzenia submit i reset do wyzwalania okien potwierdzających.</h3>
+			<form id="form5">
+				<label>Name:
+				<input type="text" placeholder="My name..." />
+				</label>
+				<label>Surname:
+				<input type="text" placeholder="My surname..." />
+				</label>
+				<label>Password:
+				<input type="password" placeholder="My password..." />
+				</label>
+			</form><br>
+			<button onclick="f5ResetForm()">Reset form</button><br>
+			<button onclick="f5Submit()">Submit</button>
+		</div><br>
+		
+		<div id="zad6">
+			<h3>6.	Wykorzystać „tryb ścisły”.</h3>
+			<p id="odp6"></p>
+			<script>
+				"use strict";
+				let countImg = document.images.length;
+				document.getElementById("odp6").innerHTML = "We have <strong>" + countImg + "</strong> images.";
+			</script>			
+		</div>
+	</body>
+</html>

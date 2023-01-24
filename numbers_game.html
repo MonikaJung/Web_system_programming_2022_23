@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Simple game - guess a number :)">
+		<meta name="keywords" content="chess, world, game, numbers, guess, fun, play">
+		<meta name="authors" content="Monika Jung, Rysiek Polkowski">
+        <!-- Website tittle -->
+        <title>Chess world - guess number</title>
+		
+		<link rel="icon" type="image/x-icon" href="images/chess_tower_icon.ico"> 
+		<link rel="stylesheet" href="style.css">
+		
+		<script type="text/javascript" src="JS_files/date_time.js"></script>
+		<script type="text/javascript" src="JS_files/numbers_game.js"></script>
+    </head>
+
+    <body onload="counting_time(), choose_number()">
+	
+		<aside id="clock" class="clock_aside"></aside>
+		
+		<header>
+			<h1>Chess world - guess the number!</h1>
+		</header>
+		
+		<nav>
+			<p>
+				<a href="index.html"><strong>MAIN PAGE</strong></a>  | 
+				<a href="chess_pieces.html"><strong>CHESS PIECES</strong></a> | 
+				<a href="top_chess_players.html"><strong>TOP 10 BEST PLAYERS </strong></a> | 
+				<a href="chess_training_form.php"><strong>SIGN UP FOR CHESS TRAINING</strong></a> | 
+				<a href="numbers_game.html"><strong>NUMBERS GAME</strong></a> |
+				<a href="article.html"><strong>WRITE ARTICLE</strong></a> |
+				<a href="login_page.php"><strong>LOG IN</strong></a> | 
+				<a href="register_page.php"><strong>REGISTER</strong></a> |
+				<a href="secret_page_verify.php"><strong>SECRET PAGE</strong></a> |
+				<a href="db_table.php"><strong>LOGINS TABLE</strong></a>
+			</p>
+		</nav>
+		
+		
+		<!-- SECTIONS & ARTICLES -->		
+		<section id="rules">
+			<p class="main_text">The programm will choose a <strong>random value between 1 and 100</strong>, try to guess as quick as possible!</p>
+			
+			<p class="main_text">Each time you'll click the <strong>Check</strong> button you'll see a respond that your number was too small, too big, you guessed correctly or that there was a wrong type of data in the text field (so that you accidently clicked a letter or a special sign). Good luck! ^^</p>
+		</section>
+		
+		<section id="game_inputs">
+			<input type="text" id="number" placeholder="Write your number here :)" maxlength="3" size=25 >
+			<input type="submit" id="check" value="Check" onclick="check_number()">
+			<input type="submit" id="again" value="Start again" onclick="choose_number()">
+			<input type="submit" id="give_up" value="Give up" onclick="show_answer()">
+			<label id="guesses"></label>
+		</section><br>
+		
+		<section id="game_respond">
+			<div id="respond" class="game_respond_text"></div>
+		</section>
+		
+		<footer>
+			<p>If you have any questions write an e-mail to 
+			<a href="mailto:chess.world.info@o2.pl">chess.world.info@o2.pl</a> :)</p>
+		</footer>
+    </body>
+</html>
+

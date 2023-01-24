@@ -1,0 +1,269 @@
+.nav
+{ 
+	width: 100%;
+	padding: 10px 0;
+	background-color: #c34f4f;
+	text-align: center;
+	border-top: 1px solid #751b1b;
+	border-bottom: 1px solid #751b1b;
+}
+
+ol
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 18px;
+	height: 35px;
+	line-height: 200%;
+	display: inline-block;
+}
+
+ol a
+{
+	color: #ffffff;
+	text-decoration: none;
+	display: block;
+}
+
+ol > li
+{
+	float: left;
+	width: 150px;
+	height: 40px;
+	border-right: 1px dashed #751b1b;
+}
+
+ol > li:first-child
+{
+	border-left: 1px dashed #751b1b;
+}
+
+ol > li:hover
+{
+	background-color: #cf6969;
+}
+
+ol > li:hover > a
+{
+	color: #451717;
+}
+
+ol > li > ul
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	height: 40px;
+	display: none;
+}
+
+ol > li:hover > ul
+{
+	display: block;
+}
+
+ol > li > ul > li
+{
+	background-color:#cf6969;
+	position: relative;
+	z-index: 100;
+	border-top: 1px dashed #751b1b;
+}
+
+ol > li > ul > li:hover
+{
+	background-color: #c34f4f;
+}
+
+ol > li > ul > li:hover > a
+{
+	color: #451717;
+}
+
+
+
+ol > li > ul > li > ul
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	height: 40px;
+	display: none;
+}
+
+ol > li > ul > li:hover > ul
+{
+	display: block;
+}
+
+ol > li > ul > li > ul > li
+{
+	background-color:#cf6969;
+	position: relative;
+	/*left: 150px;*/
+	z-index: 100;
+	border-top: 1px dashed #751b1b;
+}
+
+ol > li > ul > li > ul > li:hover
+{
+	background-color: #c34f4f;
+}
+
+ol > li > ul > li > ul > li:hover > a
+{
+	color: #451717;
+}
+
+
+.background1 {
+	background-color: yellow;
+	background-repeat:no-repeat;
+	background-image: url("images/background/black_and_white_background.png");
+	height:400px;
+	background-attachment: scroll;
+}
+.background2 {
+	background-image: url("images/background/green_background.jpg");
+}
+.background3 {
+	background-image: url("images/background/images.jpg");
+	height:400px;
+	color: white;
+}
+.background4 {
+	background-image: url("images/background/purple_chess_background.jpg");
+	height:400px;
+	color: white;
+}
+
+
+#uniqueDiv {
+	background-color: blue;
+	color: red;
+	height:40px;
+}
+
+.notUniqueDiv {
+	background-color: black;
+	color: white;
+	height:40px;
+	font-weight:700;
+	text-align:center;
+}
+
+div ul {
+	list-style-type: disc;
+	color: #0df7ac;
+	font-size:20px;
+	text-align:center;
+}
+
+div > ul > li {
+	background-color:black;
+}
+
+
+#marginDiv {
+	background-color:green;
+	margin: 25px;
+	color:white;
+
+}
+
+#paddingDiv{
+	background-color:green;
+	padding: 25px;
+	color:white;
+}
+#widthAndHeightDiv{
+	background-color:green;
+	width: 25%;
+	height: 25pt;
+	color:white;
+}
+#absolute {
+	position: absolute;
+	top: 0;
+	background-color: #cae8ca;
+	border: 2px solid #4CAF50;
+}
+#relative {
+	position: relative;
+	top: 100px;
+	left: 30px;
+	width:1000px;
+	background-color: #cae8ca;
+	border: 2px solid #4CAF50;
+}
+#fixed {
+	position: fixed;
+	bottom: 0;
+	background-color: #cae8ca;
+	border: 2px solid #4CAF50;
+}
+#ststic {
+	position: static;
+	background-color: #cae8ca;
+	border: 2px solid #4CAF50;
+}
+#absolute {
+	position: absolute;
+	top: 0;
+	background-color: #cae8ca;
+	border: 2px solid #4CAF50;
+}
+#floatLeft{
+	float:left;
+	background-color:green;
+	left: 25px;
+	color:white;
+}
+#floatRight{
+	float:right;
+	background-color:green;
+	left: 25px;
+	color:white;
+}
+#clearBoth{
+	clear:both;
+}
+
+.testDiv {
+	background-color: #343434;
+	color:white;
+	font-size:20px;
+}
+
+table, th, td {
+	border: 1px solid;
+}
+
+tr.specialtr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+a:active {
+  background-color: yellow;
+}
+
+input:checked {
+  height: 50px;
+  width: 50px;
+}
+
+input:enabled {
+  background: #ffff00;
+}
+
+input:disabled {
+  background: #dddddd;
+}
+
+p:empty {
+  width: 100px;
+  height: 20px;
+  background: #ff0000;
+}
+

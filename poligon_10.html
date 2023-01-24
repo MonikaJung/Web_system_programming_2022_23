@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Exhibition of finished exercises.">
+		<meta name="keywords" content="zad, 10, 11, ">
+		<meta name="authors" content="Monika Jung, Rysiek Polkowski">
+        <!-- Website tittle -->
+        <title>CSS - zad 10, 11</title>
+		
+		<link rel="icon" type="image/x-icon" href="images/chess_tower_icon.ico"> 
+
+    <style>
+	  @media all {
+		.div1 {
+		  background-color:rgb(100,200,255);
+		}
+	  }
+	  @media all {
+		.div15 {
+		  background-color:rgb(100,200,255);
+		  font-style: italic;
+		}
+	  }	  
+	  @media screen {
+		.div15 {
+		  background-color:black;
+		  color:white;
+		}
+	  }
+	  @media screen {
+		.div2 {
+		  background-color:red;
+		}
+	  }
+	  @media tv {
+		.div3 {
+		  background-color:rgb(200,100,255);
+		}
+	  }
+	  @media all {
+		.div4 {
+		  background-color:rgb(200,100,255);
+		}
+		
+		
+		ol:first-of-type {
+			background: #ff99ff;
+			font-weight: bold;
+			font-size: 18px;
+			color: #0000ff;
+		}
+		 ol:last-of-type {
+			background: #0000ff;
+			font-weight: bold;
+			font-size: 18px;
+			color: #ff99ff;
+		}
+		textarea:focus 
+		{ 	color: white; 
+			background-color: black 
+		}
+		a:hover { 
+			font-weight: bold 
+		}
+		a:link {
+			color: green;
+		}
+		a:visited {
+			color: red;
+		}
+		:target {
+			background-color: #e0d0ff;
+		}
+		
+		.ul1 > li:not(:first-child) {
+			color: #119a22;
+		}
+
+		.ul1 > li:nth-child(+3n) {
+			color: #111199;
+			font-weight : bold;
+		}
+		
+		.ul1 > li:last-child {
+			color: #9a1122;
+		}
+		
+		.ul2 > li {
+			color: #111192;
+		}
+		
+		.ul2 > li:nth-last-child(odd) {
+			color: #9a1122;
+			font-weight: bold;
+		}
+		b:only-child{
+			color: red;
+		}
+		i:not(:only-child){
+			color: blue;
+		}
+		
+		input:required {
+			box-shadow: 4px 4px 20px rgba(200, 0, 0, 0.85);
+		}
+		
+		input:required:focus {
+		  border: 1px solid red;
+		  outline: none;
+		}
+		
+		input:required:hover {
+			opacity: 1;
+		}
+		
+		p:first {
+		  background-color:yellow;
+		}
+	
+    </style>
+  </head>
+
+  <body>
+	<h2>Rodzaje mediów:</h2>
+	<ul>
+		<li>all	- dla wszystkich typów urządzeń</li>
+		<li>aural - dla syntezatorów mowy i dźwięku</li>
+		<li>braille - dla urządzeń przeznaczonych dla niewidomych, które umożliwiają czytanie</li>
+		<li>embossed - dla drukarek brailla</li>
+		<li>handheld - bezprzewodowe urządzenia ręczne</li>
+		<li>print - dla podglądu wydruku oraz materiałów, które zostaną wydrukowane</li>
+		<li>projectio - dla prezentacji projektorowych</li>
+		<li>screen - dla komputerów z kolorowym ekranem</li>
+		<li>tty - dla dalekopisów, terminali albo przenośnych urządzeń z ograniczonymi możliwościami wyświetlania</li>
+		<li>tv - dla telewizorów</li>
+	</ul>
+    
+	<h3>Reguła@media</h3>
+	<p>Pozwala definiowć style nie w zależnośći od konkretnych elementów strony lub ich zawartości, ale biorąc pod uwagę <strong>typ urządzenia</strong>, na którym jest wyświtlana. </p>
+	<p>Przykłady użycia dla tła:</p>
+
+	<div class="div1">Ten element div dla mediów typu all powinien mieć błęitne tło.</div>
+	<div class="div2">Ten element div dla mediów typu screen powinien mieć czerwone tło.</div>
+	<div class="div3">Ten element div dla mediów typu tv powinien mieć fioletowe tło.</div>
+	<div class="div4">Takie jak tutaj :)</div>
+	<div class="div15">Ten element dla mediów typu all też powinien być błękitny - chyba że są one równocześnie mediami typu screen. Wtedy tło będzie czarne, a tekst biały. Warto zauważyć, że styl czcionki <strong>italic był przypisany do stylu dla mediów typu all, a nie screen</strong>, zatem widać, że pierwszy styl faktycznie został zastosowany, a tylko kolidujące ze sobą elementy zostały podmienione na te ze stylu dla mediów typu screen.</div>
+	
+	<p>Z każdy innym aspektem nakładania styli będzie podobnie - ustawianie wielkośći tabel, obrazów, rodzajów tekstów, wielkośći czcionek, kolorów, itd. itd.</p>
+	<p>Dzięki temu można dostosowywać treść wyświetlaną na stronie do możliwości urządzenia.</p>
+	
+	
+	<h3>:first-of-type, :last-of-type - (ol, li)</h3>
+	<p>list 1 - użyty styl dla pierwszego</p>
+	<ol>
+		<li>first</li>
+		<li>secound</li>
+		<li>third</li>
+		<li>fourth</li>
+		<li>fifth</li>
+	</ol>
+	<p>list 2 - brak stylu</p>
+	<ol>
+		<li>first</li>
+		<li>secound</li>
+		<li>third</li>
+		<li>fourth</li>
+		<li>fifth</li>
+	</ol>
+	<p>list 3 - użyty styl dla ostatniego</p>	
+	<ol>
+		<li>first</li>
+		<li>secound</li>
+		<li>third</li>
+		<li>fourth</li>
+		<li>fifth</li>
+	</ol>
+	
+	<h3>:focus - (textarea)</h3>
+	<textarea>Ustaw tu kursor, wtedy kolor tła się zmieni :)</textarea>
+	
+	<h3>:hover, :link, :visited - (a)</h3>
+	<a href="http://webmaster.helion.pl/index.php/pcss-co-nowego-przynosi-css3/pcss-pseudoklasa-first-of-type#:~:text=Pseudoklasa%20%3Afirst-of-type%20to%20kolejny%20selektor%20strukturalny%2C%20za%20pomoc%C4%85,mo%C5%BCemy%20na%20przyk%C5%82ad%20podda%C4%87%20formatowaniu%20pierwsz%C4%85%20pozycj%C4%99%20listy.">Wskarz na link myszką, nie klikając, wtedy tekst się pogrubi :)</a><br>
+	<a href="poligon.html">Niekliknęty link powinien być koloru zielonego. (link do poprzedniej strony)</a><br>
+	<a href="https://www.kurshtml.edu.pl/css/co_to_sa_pseudoklasy,pseudoklasy.html">A kliknięty powinien zmienić kolor na czerwony. (link do kursu CSS)</a>
+	
+	<h3>:target</h3>
+	<span id="etykieta1">Oto Etykieta1</span>, <span id="etykieta2">Oto Etykieta2</span>
+	<p>Po kliknięciu w odsyłacz tło etykiety się zmieni.</p>
+	<p><a href="#etykieta1">--Odsyłacz do Etykiety1--</a><br><a href="#etykieta2">--Odsyłacz do Etykiety2--</a></p>
+	
+	<h3>:not(), :first-child, :last-child, :nth-child - (ul1)</h3>
+	
+	<ul class='ul1'>
+		<li>first</li>
+		<li>secound</li>
+		<li>third</li>
+		<li>fourth</li>
+		<li>fifth</li>
+		<li>sixth</li>
+		<li>seventh</li>
+		<li>eight</li>
+		<li>nine</li>
+	</ul>
+	
+	<h3>:nth-last-child - (ul2)</h3>
+	
+	<ul class='ul2'>
+		<li>first</li>
+		<li>secound</li>
+		<li>third</li>
+		<li>fourth</li>
+		<li>fifth</li>
+		<li>sixth</li>
+		<li>seventh</li>
+		<li>eight</li>
+	</ul>
+	
+	<h3>:only-child, :not() - (b, i)</h3>
+	
+	<p>Paragraf z <b>jednym</b> pogrubieniem.</p>
+	<p>A oto <b>paragraf</b>, który ma aż <b>dwa</b> pogrubienia. Albo i <b>więcej</b>... I tu pogrubienia się <b>nie</b> przefarbowały.</p>
+	
+	<p>Paragraf z <i>jedną</i> kursywą.</p>
+	<p>A oto <i>paragraf</i>, który ma aż <i>dwie</i> kursywy. Albo i <i>więcej</i>... I tym razem to <b>tutaj</b> kursywy się przefarbowały.</p>
+	
+	
+	<h3>:required</h3>
+	<label for="fname">First name:</label>
+	<input type="name" id="fname" name="fname"><br><br>
+	<label for="femail">Email:</label>
+	<input type="email" id="femail" name="femail" required>
+	
+  </body>
+</html>

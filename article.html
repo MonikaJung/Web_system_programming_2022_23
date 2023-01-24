@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Simple game - guess a number :)">
+		<meta name="keywords" content="chess, world, article, write, author">
+		<meta name="authors" content="Rysiek Polkowski, Monika Jung">
+        <!-- Website tittle -->
+        <title>Chess world - Your article</title>
+		
+		<link rel="icon" type="image/x-icon" href="images/chess_tower_icon.ico"> 
+		<link rel="stylesheet" href="style.css">
+		
+		<script type="text/javascript" src="JS_files/date_time.js"></script>
+		<script type="text/javascript" src="JS_files/numbers_game.js"></script>
+    </head>
+
+    <body>
+	
+		<aside id="clock" class="clock_aside"></aside>
+		
+		<header>
+			<h1>Chess world - guess the number!</h1>
+		</header>
+		
+		<nav>
+			<p>
+				<a href="index.html"><strong>MAIN PAGE</strong></a>  | 
+				<a href="chess_pieces.html"><strong>CHESS PIECES</strong></a> | 
+				<a href="top_chess_players.html"><strong>TOP 10 BEST PLAYERS </strong></a> | 
+				<a href="chess_training_form.php"><strong>SIGN UP FOR CHESS TRAINING</strong></a> | 
+				<a href="numbers_game.html"><strong>NUMBERS GAME</strong></a> |
+				<a href="article.html"><strong>WRITE ARTICLE</strong></a> |
+				<a href="login_page.php"><strong>LOG IN</strong></a> | 
+				<a href="register_page.php"><strong>REGISTER</strong></a> |
+				<a href="secret_page_verify.php"><strong>SECRET PAGE</strong></a> |
+				<a href="db_table.php"><strong>LOGINS TABLE</strong></a>
+			</p>
+		</nav>
+		
+		<!-- SECTIONS & ARTICLES -->	
+		<article>
+			<h3>
+				Write your own chess oriented article
+			</h3>
+			
+			<div>
+				<textarea id="newArticle" name="message" rows="20" cols="160"></textarea>
+			</div>
+			
+			<div>
+				<input type="submit" id="submitArticle" value="Publish article">
+			</div>
+			
+			
+			<script>
+				window.addEventListener("click", counting_time());//timer used with addEventListener zamiast inLine przy <body>
+					
+				const element = document.getElementById("submitArticle");
+				
+				element.addEventListener("click", writeArticle);
+				
+				function writeArticle(){
+					var author = prompt("Please enter your name", "Anonymous");
+					while (author == null) {
+						author = prompt("Please enter your name", "Anonymous");
+					}
+					
+					var newArticle = document.getElementById("newArticle").value;
+					
+					var seniority, intSeniority = 0;
+					do{
+						seniority = prompt("Please enter your chess playing seniority in months", "12");
+						intSeniority =  Math.floor(parseFloat(seniority) / 12);
+					}while(intSeniority == null || isNaN(intSeniority))
+					
+					document.writeln(author);
+					document.write("<br>");
+					document.writeln("Chess player seniority: " + intSeniority + " years");
+					document.write("<br>");
+					for(let i=0;i<40;i++)
+						document.write("-");
+					document.write("<br>");
+					document.writeln(newArticle);
+					
+					alert("Congratulation!\nYou have succesfully published your article!");
+				}
+				
+				
+					
+			</script>
+
+		</article>
+		
+		
+		
+		<footer>
+			<p>If you have any questions write an e-mail to 
+			<a href="mailto:chess.world.info@o2.pl">chess.world.info@o2.pl</a> :)</p>
+		</footer>
+    </body>
+</html>
+

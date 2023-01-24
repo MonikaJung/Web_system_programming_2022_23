@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Chess training form page">
+		<meta name="keywords" content="chess, world, training, form, sign up">
+		<meta name="authors" content="Rysiek Polkowski, Monika Jung">
+        <!-- Website tittle -->
+        <title>Chess world - training form</title>
+		
+		<link rel="icon" type="image/x-icon" href="images/chess_tower_icon.ico"> 
+		<link rel="stylesheet" href="style.css">
+		
+	</head>
+
+    <body>
+	
+		<header>
+			<h1>Chess Training Form - extra info</h1>
+		</header>
+	
+		<nav>
+			<p>
+				<a href="index.html"><strong>MAIN PAGE</strong></a>  | 
+				<a href="chess_pieces.html"><strong>CHESS PIECES</strong></a> | 
+				<a href="top_chess_players.html"><strong>TOP 10 BEST PLAYERS </strong></a> | 
+				<a href="chess_training_form.php"><strong>SIGN UP FOR CHESS TRAINING</strong></a> | 
+				<a href="numbers_game.html"><strong>NUMBERS GAME</strong></a> |
+				<a href="article.html"><strong>WRITE ARTICLE</strong></a> |
+				<a href="login_page.php"><strong>LOG IN</strong></a> | 
+				<a href="register_page.php"><strong>REGISTER</strong></a> |
+				<a href="secret_page_verify.php"><strong>SECRET PAGE</strong></a> |
+				<a href="db_table.php"><strong>LOGINS TABLE</strong></a>
+			</p>
+		</nav>
+		
+		<!-- INTRODUCTION -->
+		<section id="introduction">
+			<p style="font-size:18px;color:#412216">If you want to enroll on an amazing chess course under supervision of the best chess coaches, fill this training form.</p>
+		</section>
+	
+		
+		<!-- FORM -->
+
+		<section id="additional_chess_training_form">	
+			<form action="/action_page.php">
+				<fieldset>
+					<legend>Additional information:</legend>
+					
+					<label for="favcolor">Favourite Color:</label><br>
+					<input type="color" id="favcolor" name="favcolor" value="#ff0000">
+					<br>
+					
+					<label for="bmonth">Month that you want to enroll the training:</label><br>
+					<input type="month" id="bmonth" name="bmonth">
+					<br>
+					
+					<label for="age">What is your age(between 7 and 100):</label><br>
+					<input type="range" id="age" name="age" min="7" max="100" value="20" oninput="this.nextElementSibling.value = this.value">
+					<output>20</output>
+					<br>
+					
+					<label for="recentsearch">What is your most recent google search connected to chess:</label><br>
+					<input type="search" id="recentsearch" name="recentsearch" placeholder="chess online">
+					<br>
+					
+					<label for="url">Your favourite chess side:</label><br>
+					<input type="url" id="url" name="url" placeholder="https://example.com" pattern="https://.*">
+					<br>
+				</fieldset>
+				
+				<input type="submit" value="Submit">
+				<input type="reset" value="Clear my answers">
+				
+			</form>
+		</section>
+		<br>
+		
+		<footer>
+			If you have any questions write an e-mail to 
+			<a href="mailto:chess.world.info@o2.pl">chess.world.info@o2.pl</a> :)
+		</footer>
+    </body>
+</html>
