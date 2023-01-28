@@ -14,6 +14,9 @@
 		$option = 0;
 		$name =  "";
 		$surname = "";
+		$sorting = False;
+		$sort_option = '';
+		$sort_op = '';
 		
 		if (isset($_POST['name_f']) && isset($_POST['surname_f']) && $_POST['name_f']!='' && $_POST['surname_f']!='' ){
 			$option = 1;
@@ -29,30 +32,65 @@
 			$surname = $_POST['surname_f'];
 		}
 		
+		if (isset($_POST['sort']) && $_POST['sort'] != ''){
+			$sorting = True;
+			$sort_option = " order by " . $_POST['sort'];
+			$sort_op = $_POST['sort'];
+		}
+		
 		$name = htmlentities($name, ENT_QUOTES, "UTF-8");
 		$surname = htmlentities($surname, ENT_QUOTES, "UTF-8");
 	
 		$sql = '';
 		
 		if ($option == 0){
-			$sql = sprintf("SELECT email, name, surname FROM users");
 			$comment = "Results for no filter:";
+			if ($sorting){
+				$sql = sprintf("SELECT email, name, surname FROM users". $sort_option);
+				$comment = "Results for no filter (sort by ".$sort_op."):";
+			}
+			else {
+				$sql = sprintf("SELECT email, name, surname FROM users");
+			}
+
 		}
 		else if ($option == 1){
-			$sql = sprintf("SELECT email, name, surname FROM users WHERE name='%s' AND surname='%s'",
+			$comment = "Results for name '" . $name . "' and surname '" . $surname . "':";
+			if ($sorting){
+				$sql = sprintf("SELECT email, name, surname FROM users WHERE name='%s' AND surname='%s'". $sort_option,
 							mysqli_real_escape_string($polaczenie,$name),
 							mysqli_real_escape_string($polaczenie,$surname));
-			$comment = "Results for name '" . $name . "' and surname '" . $surname . "':";
+				$comment = "Results for name '" . $name . "' and surname '" . $surname . "' (sort by ".$sort_op."):";
+			}
+			else {
+				$sql = sprintf("SELECT email, name, surname FROM users WHERE name='%s' AND surname='%s'",
+							mysqli_real_escape_string($polaczenie,$name),
+							mysqli_real_escape_string($polaczenie,$surname));
+			}
 		}
 		else if ($option == 2){
-			$sql = sprintf("SELECT email, name, surname FROM users WHERE name='%s'",
-							mysqli_real_escape_string($polaczenie,$name));
 			$comment = "Results for name '" . $name . "':";
+			if ($sorting){
+				$sql = sprintf("SELECT email, name, surname FROM users WHERE name='%s'". $sort_option,
+							mysqli_real_escape_string($polaczenie,$name));
+				$comment = "Results for name '" . $name . "' (sort by ".$sort_op."):";
+			}
+			else {
+				$sql = sprintf("SELECT email, name, surname FROM users WHERE name='%s'",
+							mysqli_real_escape_string($polaczenie,$name));
+			}
 		}
 		else{
-			$sql = sprintf("SELECT email, name, surname FROM users WHERE surname='%s'",
-							mysqli_real_escape_string($polaczenie,$surname));
 			$comment = "Results for surname '" . $surname . "':";
+			if ($sorting){
+				$sql = sprintf("SELECT email, name, surname FROM users WHERE surname='%s'". $sort_option,
+							mysqli_real_escape_string($polaczenie,$surname));
+				$comment = "Results for surname '" . $surname . "' (sort by ".$sort_op."):";
+			}
+			else {
+				$sql = sprintf("SELECT email, name, surname FROM users WHERE surname='%s'",
+							mysqli_real_escape_string($polaczenie,$surname));
+			}
 		}		
 	
 		if ($rezultat = $polaczenie->query($sql))

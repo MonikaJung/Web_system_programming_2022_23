@@ -51,7 +51,18 @@
 					<input type="text" id="name_f" name="name_f">&nbsp;&nbsp;&nbsp;&nbsp;
 					
 					<label for="surname_f">Surname: </label>&nbsp;&nbsp;&nbsp;
-					<input type="text" id="surname_f" name="surname_f">
+					<input type="text" id="surname_f" name="surname_f">&nbsp;&nbsp;&nbsp;&nbsp;
+					
+					<label for="sort">Sorting: </label>&nbsp;&nbsp;&nbsp;
+					<select id="sort" name="sort">
+						<option id="sort0" value="">Choose sorting...</option>
+						<option id="sort1" value="name">By name A-Z</option>
+						<option id="sort2" value="surname">By surname A-Z</option>
+						<option id="sort3" value="email">By mail A-Z</option>
+						<option id="sort1" value="name desc">By name Z-A</option>
+						<option id="sort2" value="surname desc">By surname Z-A</option>
+						<option id="sort3" value="email desc">By mail Z-A</option>
+					</select>
 					<br><br>
 				
 				<input type="submit" value="Show results">&nbsp;
